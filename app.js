@@ -46,15 +46,29 @@ entradaDados.question('Adicione o primeiro número:' , function (primeiroNumero)
                
                 if(operacaoDesejada == '+'){
                     resultado = Number (numero1) + Number(numero2);
+               
                 }else if (operacaoDesejada == '-'){
                     resultado = Number (numero1) - Number(numero2)
+               
                 }else if (operacaoDesejada == 'x'){
                     resultado = numero1 * numero2
+               
                 } else if(operacaoDesejada = '%'){
+                 //validação divisão por 0  
+                    if(numero2 == 0)
+                        console.log("ERRO: não é possível dividir um numéro po 0")
+                       else  
                     resultado = numero1 / numero2
+                } else{
+                    console.log('A operação informada é invalida')
                 }
-            console.log(resultado);
+           //validação para exibir o conteudo caso a variavel não seja undefined
+                if (resultado !=undefined)
+           //toFixed- permite especificar a quantidade de digitos após a virgula
+                console.log( String(resultado.toFixed(2)).replace('.',','));
+            console.log('*****************************************************************')
             }
+        
 
 
         });
