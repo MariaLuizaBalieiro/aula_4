@@ -53,6 +53,7 @@ entradaDados.question('Adicione o primeiro número:' , function (primeiroNumero)
                 } else if(operacaoDesejada = '%'){
                     resultado = numero1 / numero2
                 }
+            console.log(resultado);
             }
 
 
